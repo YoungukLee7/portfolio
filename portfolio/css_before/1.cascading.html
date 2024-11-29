@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascading</title>
+    <style>
+      /*
+        CSS 우선순위
+        0. !important (사용 안하는 것을 권장)
+        1. 인라인 
+        2. #아이디
+        3. .클래스
+        4. 태그
+        5. 같은 것 끼리는 가장 나중에 선언된 것이 우선적으로 스타일 적용
+         - 나중에 선언된 것에서 언급 안한 스타일은 기존 것 그대로 유지
+      */
+      h1 {
+        font-size: 16px;
+      }
+      button {
+        background-color: blue;
+        color: white;
+      }
+      .special {
+        background-color: purple;
+        color: pink;
+      }
+      #primary {
+        background-color: black;
+      }
+      .special {
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cascading을 확인하는 버튼들</h1>
+    <button>태그 버튼</button>
+    <button class="special">클래스 버튼</button>
+    <button class="special">클래스 버튼</button>
+    <button class="special" id="primary">클래스+아이디 버튼</button>
+    <button class="special" id="primary" style="background-color: darkgreen">
+      클래스+아이디 버튼
+    </button>
+  </body>
+</html>

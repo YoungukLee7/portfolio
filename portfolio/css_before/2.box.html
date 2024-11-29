@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        background-color: chocolate;
+      }
+      .box1,
+      .box3 {
+        padding: 20px;
+        border: 5px solid black;
+      }
+      .box1 {
+        /* 
+          padding과 border를 적용하면 기존에 만들었던 box 사이즈가 커진다.
+          이유는 box 사이즈에 padding과 border가 합쳐지기 떄문이다.
+          그래서 박스 사이즈 유지하기 위해서 box-sizing: border-box를 설정해준다.
+        */
+        box-sizing: border-box;
+      }
+      .box3 {
+        /*
+          기본 박스 설정은 box-sizing: content-box 이다.
+        */
+        box-sizing: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>
