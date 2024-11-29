@@ -13,6 +13,7 @@
         background-color: darkslategray;
       }
       .box {
+        position: relative;
         width: 80%;
         height: 80%;
         padding: 20px;
@@ -26,7 +27,14 @@
         background-color: palevioletred;
       }
       .inner2 {
+        /* 
+          기존 문서에서 요소가 빠져 나오면서 부모 요소가 변경되어 스타일이 다르게 적용된다
+          빠져 나온 자리 뒤에 요소가 있다면 기존 요소가 있던 자리에 빠르게 채워진다
+        */
+        position: absolute;
         background-color: palegoldenrod;
+        top: 20%;
+        left: 50px;
       }
       .inner3 {
         background-color: darkseagreen;

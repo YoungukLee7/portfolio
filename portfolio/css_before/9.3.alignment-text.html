@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text Centering</title>
     <style>
+      /* 텍스트를 중앙에 위치시키는 방법 */
       .box {
         width: 200px;
         height: 100px;
         background-color: grey;
+        /* 텍스트를 중앙에 위치시키고 */
+        text-align: center;
+      }
+      .text {
+        /* 높이를 부모 높이의 100%로 설정하고 */
+        height: 100%;
+        /* 부모의 높이인 height을 100px로 설정한다 (정석적인 방법은 아니며 9.4, 9.5 방법을 추천한다) */
+        line-height: 100px;
       }
     </style>
   </head>

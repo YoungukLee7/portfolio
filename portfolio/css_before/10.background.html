@@ -12,6 +12,28 @@
         height: 200px;
         margin-bottom: 20px;
       }
+      .box1 {
+        background-image: url("https://media.swncdn.com/cms/BST/67912-gettyimages-817147678-kieferpix.1200w.tn.webp");
+        /* 이미지 반복 멈춤 */
+        background-repeat: no-repeat;
+        /* 이미지 중간 부분 고정 */
+        background-position: center;
+        /* 이미지가 반응적으로 확대 축소가 된다 */
+        background-size: cover;
+        /* 기존 이미지 사이즈 고정 */
+        /* background-size: contain; */
+      }
+      /* 위에 설정한 것을 더욱 간략하게 작성한 것 */
+      .box2 {
+        background: center/cover no-repeat
+          url("https://media.swncdn.com/cms/BST/67912-gettyimages-817147678-kieferpix.1200w.tn.webp");
+      }
+      /* no-repeat을 사용하지 않고 fixed를 사용 */
+      .box3 {
+        /* fixed: 이미지가 확대 축소가 안되고 고정 */
+        background: center/cover fixed
+          url("https://media.swncdn.com/cms/BST/67912-gettyimages-817147678-kieferpix.1200w.tn.webp");
+      }
     </style>
   </head>
   <body>

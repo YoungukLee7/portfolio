@@ -10,12 +10,17 @@
         width: 200px;
         height: 100px;
         background-color: slategray;
+        /* 기본 형태 */
+        display: block;
       }
 
       .inner {
         width: 50%;
         height: 50%;
         background-color: blue;
+        /* block일 경우 기본적으로 margin이 오른쪽으로만 들어간다 */
+        /* margin을 균등하게 수평으로 적용하고 싶다면 auto로 지정하면 요소가 중간으로 위치한다 */
+        margin: auto;
       }
     </style>
   </head>

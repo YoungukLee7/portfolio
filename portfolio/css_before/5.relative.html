@@ -13,6 +13,12 @@
         background-color: darkslategray;
       }
       .box {
+        /* 부모의 position을 따로 지정하지 않았다면 static으로 지정되어 있다 */
+        /* position: static; */
+        /* 자식 요소가 position: absolute를 사용하여 빠져 나오게 되어도
+           지금의 부모 요소를 따르게 만들고 싶다면 
+        */
+        position: relative;
         width: 80%;
         height: 80%;
         padding: 20px;
@@ -27,6 +33,12 @@
       }
       .inner2 {
         background-color: palegoldenrod;
+        /* 요소의 위치를 그대로 유지 하면서 상대적으로 지정한 것 만큼 요소가 이동된다 */
+        position: relative;
+        top: 80px;
+        left: 80px;
+        /* bottom: 80px;
+        right: 80px; */
       }
       .inner3 {
         background-color: darkseagreen;
