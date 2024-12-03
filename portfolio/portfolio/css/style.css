@@ -124,13 +124,16 @@ button:focus {
   color: var(--color-text);
   padding: 5rem 1rem;
   padding-top: 7rem;
+  /* 모든 text가 중앙에 오게 설정 */
   text-align: center;
 }
 
 .home__avatar {
   width: 250px;
   height: 250px;
+  /* 이미지 비율 유지 */
   object-fit: cover;
+  /* 이미지 테두리 원으로 설정 */
   border-radius: 100%;
   border: 3px solid var(--color-accent);
 }
@@ -149,18 +152,29 @@ button:focus {
 }
 
 .home__contact {
+  /* a태그는 inline 태그이기 때문에 위 아래로 margin이 적용되지 않는다
+     해서 margin을 적용하기 위해 display를 inline으로 설정해준다
+  */
   display: inline-block;
   background-color: var(--color-accent);
   color: var(--color-black);
+  /* 바깟쪽으로 여백이 생김 */
   margin: 2rem;
+  /* 안쪽으로 여백이 생김 */
   padding: 0.5rem 1rem;
+  /* font를 진하게 표현 */
   font-weight: bold;
+  /* 모서리 둥글게 표현 */
+  border-radius: 4px;
 }
 
 .home__contact:hover {
+  /* 배경색을 투명하게 적용 */
   background-color: transparent;
   color: var(--color-text);
-  /* border: 2px solid var(--color-accent); */
+  /* home__contact에 width, height를 지정하지 않아서 border를 사용하면 스타일이 밀려난다
+     그래서 contact의 size에 영향을 주지 않으면서 테두리를 적용하려면 outline을 이용해야 한다
+  */
   outline: 2px solid var(--color-accent);
-  border-radius: 4px;
+  /* border: 2px solid var(--color-accent); */
 }
