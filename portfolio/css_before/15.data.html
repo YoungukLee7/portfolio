@@ -12,12 +12,21 @@
         background-color: tomato;
         margin-bottom: 50px;
       }
+      /* 직접 data를 지정하여 값을 준 곳을 CSS에서 지정하여 스타일을 적용할 수 있다. */
+      div[data-display-name="dream"] {
+        background-color: beige;
+      }
     </style>
   </head>
   <body>
-    <div>드림!!</div>
-    <div></div>
-    <span>드림!!</span>
-    <script></script>
+    <div data-index="1" data-display-name="dream">드림!!</div>
+    <div data-index="2" data-display-name="coding"></div>
+    <span data-index="3" data-display-name="house">드림!!</span>
+    <script>
+      // 직접 data를 지정하여 값을 준 곳을 js에서도 사용할 수 있다.
+      const dream = document.querySelector('div[data-display-name="dream"]');
+      console.log(dream.dataset);
+      console.log(dream.dataset.displayName);
+    </script>
   </body>
 </html>
