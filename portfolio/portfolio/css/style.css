@@ -176,8 +176,9 @@ button:focus {
 }
 
 .home__contact {
-  /* a태그는 inline 태그이기 때문에 위 아래로 margin이 적용되지 않는다
-     해서 margin을 적용하기 위해 display를 inline으로 설정해준다
+  /* 
+    a태그는 inline 태그이기 때문에 위 아래로 margin이 적용되지 않는다
+    해서 margin을 적용하기 위해 display를 inline으로 설정해준다
   */
   display: inline-block;
   background-color: var(--color-accent);
@@ -196,8 +197,9 @@ button:focus {
   /* 배경색을 투명하게 적용 */
   background-color: transparent;
   color: var(--color-text);
-  /* home__contact에 width, height를 지정하지 않아서 border를 사용하면 스타일이 밀려난다
-     그래서 contact의 size에 영향을 주지 않으면서 테두리를 적용하려면 outline을 이용해야 한다
+  /* 
+    home__contact에 width, height를 지정하지 않아서 border를 사용하면 스타일이 밀려난다
+    그래서 contact의 size에 영향을 주지 않으면서 테두리를 적용하려면 outline을 이용해야 한다
   */
   outline: 2px solid var(--color-accent);
   /* border: 2px solid var(--color-accent); */
@@ -206,6 +208,7 @@ button:focus {
 /* About */
 .majors {
   display: flex;
+  /* item들 사이에 간격을 띄워 주기 위해 사용 */
   justify-content: space-between;
   gap: 1rem;
   margin: 2.5rem 0;
@@ -217,6 +220,7 @@ button:focus {
   color: var(--color-text);
   border-radius: 1rem;
   cursor: default;
+  /* https://ui.aceternity.com/tools/box-shadows: 사이트에서 효과 가지고 와서 적용 */
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
 }
 
@@ -224,6 +228,10 @@ button:focus {
   font-size: 4rem;
   margin: 1rem 0;
   color: var(--color-accent);
+  /*
+    transition은 요소가 상태 변화(예: hover, focus, active 등)를 할 때 변화가 부드럽게 진행되도록 설정하는 CSS 속성
+    위 코드는 모든 속성(all)에 대해 300ms(0.3초) 동안 ease(완만한 가속 및 감속) 효과를 적용하겠다는 의미
+  */
   transition: all 300ms ease;
 }
 
@@ -234,10 +242,15 @@ button:focus {
 }
 
 .major:hover .major__icon {
+  /*
+    transform 속성은 요소를 2D 또는 3D 공간에서 변형시키는 데 사용
+    위 코드는 요소를 -15도 회전시키고, 1.2배 크기로 확대하겠다는 의미
+  */
   transform: rotate(-15deg) scale(1.2);
 }
 
 .jobs {
+  /* 문서의 쓰기 방향에 따라 시작점으로 정렬 */
   text-align: start;
 }
 
