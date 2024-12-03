@@ -1,0 +1,120 @@
+/* Global: 페이지 전체에 적용되는 설정들 */
+:root {
+  /* App Colors: 정의된 색상을 직접 사용하지 않고 한번 거쳐서 색상을 적용해준다. (색상을 변경하고 싶을 때 한번에 변경 가능하다) */
+  --color-primary: var(--color-black); /* 주된 색상 */
+  --color-primary-variant: var(--color-gray); /* 주된 색상 (변형된 색상) */
+  --color-accent: var(--color-blue); /* 강조하는 색상 */
+  --color-accent-variant: var(--coler-orange); /* 강조하는 색상 (변형된 색상) */
+  --color-text: var(--color-white); /* 텍스트 색상 */
+
+  /* Colors: 화면을 만드는데 사용할 색상들을 미리 정의 */
+  --color-white: white;
+  --color-black: black;
+  --color-blue: rgb(15, 133, 141);
+  --coler-orange: orange;
+  --color-gray: gray;
+}
+
+* {
+  /* padding과 border를 적용하여도 box 크기를 유지하기 위해 설정 */
+  box-sizing: border-box;
+}
+
+body {
+  /* 구글 폰트 스타일을 Open Sans로 적용하였기 떄문에 Open Sans로 설정하고 인터넷이 안되는 경우 기본값을 sans-serif로 설정 */
+  font-family: "Open Sans", sans-serif;
+  /* body에 마진 초기화 */
+  margin: 0;
+}
+
+/* 기본 스타일들 초기화 */
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+button:focus {
+  outline: 1px solid var(--color-accent);
+}
+
+/* Header */
+.header {
+  background-color: black;
+  /* 위치 고정 */
+  position: fixed;
+  /* 상단 고정 */
+  top: 0;
+  /* 넓이 100% */
+  width: 100%;
+  padding: 1rem;
+  /* header에 있는 item들을 나란히 배치하기 위해 flex 사용 */
+  display: flex;
+  /* header에 있는 item들 사이에 간격을 띄워 주기 위해 사용 */
+  justify-content: space-between;
+  /* header에 있는 item들을 중간 정렬하기 위해 사용 */
+  align-items: center;
+}
+/* //Header */
+
+.header__logo {
+  /* item들을 나란히 배치하기 위해 flex 사용 */
+  display: flex;
+  /* item들을 중간 정렬하기 위해 사용 */
+  align-items: center;
+  /* item들 사이의 여백을 주기 위해 사용 */
+  gap: 8px;
+}
+
+.header__logo__img {
+  width: 36px;
+  height: 36px;
+}
+
+.header__logo__title {
+  font-size: 1.8rem;
+}
+
+.header__menu {
+  /* item들을 나란히 배치하기 위해 flex 사용 */
+  display: flex;
+  /* item들 사이의 여백을 주기 위해 사용 */
+  gap: 4px;
+}
+
+.header__menu_item {
+  /* 위 아래는 8px씩 주고 양 옆은 16px씩 주며 띄워준다 */
+  padding: 8px 16px;
+}
+
+/* Header 버튼에 마우스가 올라오면 스타일 적용  */
+.header__menu_item:hover {
+  /* 마우스가 올라오면 border 아래쪽에만 색상 적용  */
+  border-bottom: 1px solid var(--color-accent);
+}
+
+/* active로 선택된 것 스타일 적용 */
+.header__menu_item.active {
+  /* active로 선택되어 있는 것 border 색상 적용 */
+  border: 1px solid var(--color-accent);
+  /* border가 직사각형인 것을 모서리만 둥글게 표현하기 위해 사용 */
+  border-radius: 4px;
+}
