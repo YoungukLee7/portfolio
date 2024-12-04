@@ -5,9 +5,8 @@
     - querySelector: document에 있는 선택자 함수
 */
 // 헤더에 있는 모든 요소 가져오기
-const header = document.querySelector(".header");
-
 // 헤더의 좌표, 넓이, 높이 가져오기
+const header = document.querySelector(".header");
 const headerHeight = header.getBoundingClientRect().height;
 
 // Header가 페이지 아래로 스크롤이 발생할 떄마다 스타일링 적용
@@ -18,4 +17,12 @@ document.addEventListener("scroll", () => {
   } else {
     header.classList.remove("header--dark");
   }
+});
+
+// Home Section을 아래로 스크롤시 투명하게 스타일링 적용
+const home = document.querySelector(".home__container");
+const homeHeight = home.offsetHeight;
+
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
