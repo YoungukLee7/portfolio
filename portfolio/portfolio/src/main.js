@@ -37,3 +37,10 @@ document.addEventListener("scroll", () => {
     arrowUp.style.opacity = 0;
   }
 });
+
+// Navbar 토글버튼 클릭 처리
+const navberMenu = document.querySelector(".header__menu");
+const navberToggle = document.querySelector(".header__toggle");
+navberToggle.addEventListener("click", () => {
+  navberMenu.classList.toggle("open");
+});
