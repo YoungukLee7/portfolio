@@ -12,7 +12,7 @@
   --color-black: black;
   --color-blue: rgb(15, 133, 141);
   --coler-orange: orange;
-  --color-gray: gray;
+  --color-gray: rgb(34, 22, 68);
 
   /* Size */
   --size-max-width: 1200px;
@@ -268,4 +268,45 @@ button:focus {
 .job__period {
   color: var(--color-primary);
   font-size: 0.8rem;
+}
+
+/* Skills */
+#skills {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+}
+
+.skills {
+  /* Skills를 그리드 박스로 설정 */
+  display: grid;
+  /* 그리드 박스 설정을 할 때 몇개의 행으로 만들어 줄 것인지 작성 필요 */
+  grid-template-columns: 6fr 4fr;
+  margin: 2rem 3rem;
+  border-radius: 8px;
+  /* 모서리 둥글게 설정하려 하는데 자식 요소중에 내 컨테이너 밖으로 나온 item 이 있다면 안보이게 설정 */
+  overflow: hidden;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
+}
+
+.skills_title {
+  color: var(--color-accent);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.skills__coding {
+  /* 그리드 low를 현재 있는 곳으로 부터 span 2개를 차지하게 설정 */
+  grid-row: span 2;
+  padding: 1rem;
+  background-color: var(--color-primary);
+}
+
+.skills__tools {
+  padding: 1rem;
+}
+
+.skills__etc {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  filter: brightness(150%);
 }
