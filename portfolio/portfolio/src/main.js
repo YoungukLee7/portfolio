@@ -24,5 +24,16 @@ const home = document.querySelector(".home__container");
 const homeHeight = home.offsetHeight;
 
 document.addEventListener("scroll", () => {
+  /* 스크롤 수치를 정밀하게 opacity를 설정하기 위해 여기서 직접 opacity를 변경한다. */
   home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// Arrow uo 버튼을 아래로 스크롤시 투명하게 스타일링 적용
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.style.opacity = 1;
+  } else {
+    arrowUp.style.opacity = 0;
+  }
 });
