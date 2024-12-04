@@ -82,7 +82,7 @@ button:focus {
 
 /* Header */
 .header {
-  background-color: black;
+  background-color: transparent;
   /* 위치 고정 */
   position: fixed;
   /* 상단 고정 */
@@ -98,6 +98,13 @@ button:focus {
   align-items: center;
   /* 화면 중 가장 위에 있도록 설정 */
   z-index: 1;
+  transition: all 300ms ease;
+}
+
+/* Header가 스크롤에 따라 스타일 변경 */
+.header--dark {
+  background-color: var(--color-primary);
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
 }
 
 .header__logo {
