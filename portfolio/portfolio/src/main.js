@@ -1,3 +1,6 @@
+/* 예전 버전에 나쁜 관행을 사용한다면 그것에 대한 에러 메세지를 받을 수 있다 */
+"use strict";
+
 /*
     window.document.querySelector('');
     - window: 브라우저에서 기본적으로 제공해주는 글로벌 객체

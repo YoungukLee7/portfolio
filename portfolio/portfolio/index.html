@@ -33,8 +33,15 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- //CSS -->
-    <!-- Javascript defer: html문서가 다 분석되고 js를다운로드 받아서 실행되게 만드는 명령어 -->
-    <script src="src/main.js" defer></script>
+    <!-- Javascript 
+      defer: html문서가 다 분석되고 js를다운로드 받아서 실행되게 만드는 명령어 
+      type="module": 각각의 js파일들을 독립적으로 고립된 모듈화하여 작업하기 위해 사용
+      이렇게 하는 이유
+      1. 하나의 js파일에 한꺼번에 많은 작업을 하는 것은 유지보수에 좋지 않다
+      2. js에 작성한 코드는 기본적으로 전역으로 사용할 수 있는데 코드 규모가 커지면 커질수록 이로인한 문제가 발생한다
+    -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
     <!-- //Javascript -->
   </head>
   <body>
