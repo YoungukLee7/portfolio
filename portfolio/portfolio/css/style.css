@@ -142,8 +142,11 @@ button:focus {
 }
 
 .header__menu_item {
+  /* a태그를 li태그에 꽉 채우려면 기본 inline에서 block으로 변경해 준다 */
+  display: block;
   /* 위 아래는 8px씩 주고 양 옆은 16px씩 주며 띄워준다 */
   padding: 8px 16px;
+  border-bottom: 1px solid transparent;
 }
 
 /* Header 버튼에 마우스가 올라오면 스타일 적용  */
@@ -533,7 +536,7 @@ button:focus {
 /* 반응형 스타일 정의 */
 @media screen and (max-width: 768px) {
   .section {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
 
   .title {
@@ -558,7 +561,12 @@ button:focus {
     display: none;
     flex-direction: column;
     text-align: center;
-    padding: 1rem 4rem;
+    /* 
+      js에서 .header__menu을 가지고 클릭 이벤트를 주었기 때문에 빈 곳을 클릭하여도 닫히는 현상이 일어남
+      .header__menu 크기를 줄이면 클릭하여도 클릭 이벤트가 실행되지 않게 만들어준다 (padding -> margin)
+    */
+    /* padding: 1rem 4rem; */
+    margin: 1rem 4rem;
     gap: 1rem;
   }
 
